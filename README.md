@@ -30,9 +30,9 @@ This Java application provides a graphical user interface for managing a medical
       * [Profit Operation](#profit-operation)
       * [Doctor Salary](#doctor-salary)
     * [6. Human Resources Inspector](#6-human-resources-inspector)
-      * [Add/Edit Holidays](#add-edit-holidays)
-      * [Add/Edit General Schedule](#add-edit-general-schedule)
-      * [Add/Edit Specific Schedule](#add-edit-specific-schedule)
+      * [Add/Edit Holidays](#add/edit-holidays)
+      * [Add/Edit General Schedule](#add/edit-general-schedule)
+      * [Add/Edit Specific Schedule](#add/edit-specific-schedule)
 
 ## Technologies Used
 
