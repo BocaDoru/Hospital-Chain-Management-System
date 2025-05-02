@@ -150,34 +150,37 @@ This Java application provides a graphical user interface for managing a medical
 4.   **Work("Munca"):** This is the principal menu for role-specific actions.
 5.   **Logout:** Exits the user account.
 
-1. ### Admin and Super Admin
+### 1. Admin and Super Admin
 
 * The *Admin* role can visualize all the **non admin users** and can do 3 actions: Add, Edit, Delete User for the non admin roles. This role it's used for better users administration and easier management.
 * The *Super Admin* role can visualize all the users, **including the Admin and Super Admin roles**, and can do the same action as an Admin for all the roles.
 
-  #### Add User
-  * For adding a new user the *Admin* has to follow those steps:
-  1. Click the *Add User* button, this will open another menu with more options.
-  2. For adding a new user select the **User("Utilizator)** option, a formular will open where you need to add the personal information for the new user:
-  3. To add the suplimentar information for each role of an already added user select their role. Those roles can be:  **Medical Employee("Medical")***(if you want to add a Doctor or a Nurse you need to complete those information first)*, **Nurse("Asistent Medical)**, **Doctor("Medic")** amd **Receptionist("Receptioner")**.
-  4. For a Doctor there can be added suplimentar informations as:
-      * **Medical Competence("Medic Competenta)**
-         * CNP(the *Doctor* CNP)
-         * Competence ID
-      * **Medical Unit("Medic Unitate")**
-         * CNP(the *Doctor* CNP)
-         * Medical Unit ID
-   5. After the wanted user has been added click the *Sign Up* button.
+#### Add User
 
-   #### Edit User
-   * For editing an existing user the *Admin* has to follow those steps:
-   1. Select the wanted user from the *Users table*.
-   2. Click the *Edit User* button, a new menu will open.
-   3. In this menu the *Admin* can modify all the information except the **CNP**.
-   4. After the wanted information where changed click the *Save Changes* button.
+* For adding a new user the *Admin* has to follow those steps:
+1. Click the *Add User* button, this will open another menu with more options.
+2. For adding a new user select the **User("Utilizator)** option, a formular will open where you need to add the personal information for the new user:
+3. To add the suplimentar information for each role of an already added user select their role. Those roles can be:  **Medical Employee("Medical")***(if you want to add a Doctor or a Nurse you need to complete those information first)*, **Nurse("Asistent Medical)**, **Doctor("Medic")** amd **Receptionist("Receptioner")**.
+4. For a Doctor there can be added suplimentar informations as:
+*  **Medical Competence("Medic Competenta)**
+  * CNP(the *Doctor* CNP)
+  * Competence ID
+*  **Medical Unit("Medic Unitate")**
+  * CNP(the *Doctor* CNP)
+  * Medical Unit ID
+5. After the wanted user has been added click the *Sign Up* button.
 
-  #### Delete User
-  * For deleting an user the *Admin* has to follow those steps:
-  1. Select the wanted user from the *Users Table*.
-  2. Click *Delete User* button, a dialog window will open.
-  3. Confirm this action by clicking the *Yes* button, or *No* button to cancel.
+#### Edit User
+
+* For editing an existing user the *Admin* has to follow those steps:
+1. Select the wanted user from the *Users table*.
+2. Click the *Edit User* button, a new menu will open.
+3. In this menu the *Admin* can modify all the information except the **CNP**.
+4. After the wanted information where changed click the *Save Changes* button.
+
+#### Delete User
+
+* For deleting an user the *Admin* has to follow those steps:
+1. Select the wanted user from the *Users Table*.
+2. Click *Delete User* button, a dialog window will open.
+3. Confirm this action by clicking the *Yes* button, or *No* button to cancel.
