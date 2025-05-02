@@ -11,7 +11,7 @@ This Java application provides a graphical user interface for managing a medical
    * [Compilation and Building](#compilation-and-building)
    * [Running the Application](#running-the-application)
 * [Usage](#usage)
-   * [General Description](#general-description)
+   * [generic Description](#generic-description)
    * [1. Admin and Super Admin](#1-admin-and-super-admin)
       * [Add User](#add-user)
       * [Edit User](#edit-user)
@@ -31,8 +31,17 @@ This Java application provides a graphical user interface for managing a medical
       * [Doctor Salary](#doctor-salary)
     * [6. Human Resources Inspector](#6-human-resources-inspector)
       * [Add/Edit Holidays](#addedit-holidays)
-      * [Add/Edit General Schedule](#addedit-general-schedule)
+      * [Add/Edit Generic Schedule](#addedit-generic-schedule)
       * [Add/Edit Specific Schedule](#addedit-specific-schedule)
+* [Project Structure](#project-structure)
+    * [Common Classes(Used Across Roles)](#common-classesused-across-roles)
+    * [Admin Role Classes](#admin-role-classes)
+    * [Receptionist Role Classes](#receptionist-role-classes)
+    * [Doctor Role Classes](#doctor-role-classes)
+    * [Nurse Role Classes](#nurse-role-classes)
+    * [Financial Expert Role Classes](#financial-expert-role-classes)
+    * [Human Resources Inspector Role Classes](#human-resources-inspector-role-classes)
+    * [Medical Unit Classes](#medical-unit-classes)
 
 ## Technologies Used
 
@@ -131,7 +140,7 @@ This Java application provides a graphical user interface for managing a medical
    * Click the *Login* button.
 3. Upon successful login, the application will display the Main Menu.
 
-### General user functionality
+### generic user functionality
 
 *   After login succesfully the user will be redirected to the Main Menu("Meniul Principal") from where he can access diferent parts of the application based on his role. The basic 4 interaction that every role has are:
 1.   **View Personal Infos("Vizualizare Informatii Personale"):** Where the user can view his personal infos. Those infos are based on the specific role:
@@ -313,8 +322,8 @@ This Java application provides a graphical user interface for managing a medical
 * **Before any operation can be carried the *Human Resources Inspector* need to select an user by filling the First Name, Last Name and Role fields**
 * If a user was found a new window will open, this window contains:
 1. **Holidays Table:** here are all the holidays for the selected user.
-2. **General Schedule:** here are the week days that the user works.
-3. **Specific Schedule:** some roles can have a *specific schedule* for a date. This schedule has priority over the *General Schedule*. 
+2. **generic Schedule:** here are the week days that the user works.
+3. **Specific Schedule:** some roles can have a *specific schedule* for a date. This schedule has priority over the *generic Schedule*. 
 
 #### Add/Edit Holidays
 
@@ -329,16 +338,16 @@ This Java application provides a graphical user interface for managing a medical
 3. Fill the new *Start Date* and *End Date*.
 4. Click *OK* button to finish this action, or *Cancel* to discard those changes.
 
-#### Add/Edit General Schedule
+#### Add/Edit Generic Schedule
 
-* For adding a new general schedule entry the *Human Resources Inspector* has to follow those steps:
-1. Click *Add* button under the general schedule table, this will open a new window.
+* For adding a new generic schedule entry the *Human Resources Inspector* has to follow those steps:
+1. Click *Add* button under the generic schedule table, this will open a new window.
 2. Fill the *Day*, *Start Time* and *End Time* fields.
 3. Click *OK* button to finish this action, or *Cancel* otherwise.
 
-* For editing an existing general schedule entry the *Human Resources Inspector* has to follow those steps:
-1. Select the wanted general schedule entry from the table.
-2. Click *Edit* button under the general schedule table, this will open a new window.
+* For editing an existing generic schedule entry the *Human Resources Inspector* has to follow those steps:
+1. Select the wanted generic schedule entry from the table.
+2. Click *Edit* button under the generic schedule table, this will open a new window.
 3. Fill the new *Day*, *Start Time* and *End Time* fields.
 4. Click *OK* button to finish this action, or *Cancel* to discard those changes.
 
@@ -354,3 +363,65 @@ This Java application provides a graphical user interface for managing a medical
 2. Click *Edit* button under the specific schedule table, this will open a new window.
 3. Fill the new *Date*, *Start Time* and *End Time* fields.
 4. Click *OK* button to finish this action, or *Cancel* to discard those changes.
+
+## Project Structure
+
+### Common Classes(Used Across Roles)
+
+* `Main.java`: Handles application startup and initialization.
+* `Conexiune.java`: Manages the connection to the MySQL database.
+* `LoginFame.java`: Handles user login and authentication.
+* `MainFrame.java`: Main Menu window.
+* `Utilizator.java`: Contains the user specific fields. Provides methods for retrieving user data in the database.
+* `ProceduriSql.java`: Contains methods for SQL views and triggers calls.
+
+### Admin Role Classes
+
+* `ShowAdmin.java`: Handles admin role specific actions.
+* `InserariFrame.java`: Handles user registration.
+
+ ### Receptionist Role Classes
+
+* `Receptioner.java`: Contains the receptionist specific fields. Provides methods for retrieving receptionist data in the database.
+* `Pacient.java`: Contains the pacient specific fields. Provides methods for retrieving and creating pacient data in the database.
+* `Programare.java`: Contains the programation specific fields. Provides methods for retrieving and creating programation data in the database.
+* `ProgramareFrame.java`: Handles receptionist role specific actions.
+* `PacientiListFrame.java`, `MediciListFrame.java`, `AsistentListFrame.java`, `ServiciiListFrame.java`, `TimeListFrame.java`: Handles list selection frames.
+* `CreerePacientFrame.java`: Handles pacient registration.
+* `ServiciuMedical.java`: Contains the medical services specific fields. Provides methods for retrieving medical services data in the database.
+* `Competenta.java`: Contains the medical competence specific fields.
+
+### Doctor Role Classes
+
+* `Medical.java`: Contains the medical employee specific fields. Provides methods for retrieving medical employee data in the database.
+* `Medic.java`: Contains the doctor specific fields. Provides methods for retrieving doctor data in the database.
+* `MedicFrame.java`: Handles doctor role specific actions.
+* `RaportMedical.java`: Contains the medical report specific fields. Provides methods for retrieving and creating medical report data in the database.
+* `RaportMedicalFrameList.java`: Handles medical reports list selection frame.
+* `RaportMedicalFrame.java`: Handles reports specific actions.
+
+### Nurse Role Classes
+
+* `AsistentMedical.java`: Contains the nurse specific fields. Provides methods for retrieving nurse data in the database.
+* `AsistentFrame.java`: Handles nurse specific actions.
+
+### Financial Expert Role Classes
+
+* `ShowModul2.java`: Handles financial expert specific actions.
+* `ShowExpertFinanciarProfit.java`: Handles profit operations.
+* `ShowExpertFinanciarSalarii.java`: Handles salary operations.
+* `ShowBonus.java`: Handles doctor salary operation.
+
+### Human Resources Inspector Role Classes
+
+* `AngajatFrame.java`: Handles human resources inspector specific actions.
+* `CautaAngajatFrame.java`: Handles user finding.
+* `Concediu.java`: Contains the holiday specific fields. Provides methods for retrieving holiday data in the database.
+* `DisplayOrarMedicalFrame.java`: Handles schedule display.
+* `OrarGeneric.java`: Contains the generic schedule specific fields. Provides methods for retrieving generic schedule data in the database.
+* `OrarSpecific.java`: Contains the specific schedule specific fields. Provides methods for retrieving specific schedule data in the database.
+
+### Medical Unit Classes
+
+* `UnitateMedicala.java`: Contains the medical unit specific fields. Provides methods for retrieving medical unit data in the database.
+* `CabinetMedical.java`: Contains the medical cabinet specific fields.
