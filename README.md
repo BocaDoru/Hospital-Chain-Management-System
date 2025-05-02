@@ -11,7 +11,7 @@ This Java application provides a graphical user interface for managing a medical
    * [Compilation and Building](#compilation-and-building)
    * [Running the Application](#running-the-application)
 * [Usage](#usage)
-   * [generic Description](#generic-description)
+   * [General Description](#general-description)
    * [1. Admin and Super Admin](#1-admin-and-super-admin)
       * [Add User](#add-user)
       * [Edit User](#edit-user)
@@ -26,8 +26,8 @@ This Java application provides a graphical user interface for managing a medical
       * [View Pacient Information](#view-pacient-information-1)
       * [View Pacient Reports](#view-pacient-reports-1)
     * [5. Financial Expert](#5-financial-expert)
-      * [Salary Operation](#salary-operation)
-      * [Profit Operation](#profit-operation)
+      * [Salary Operations](#salary-operations)
+      * [Profit Operations](#profit-operations)
       * [Doctor Salary](#doctor-salary)
     * [6. Human Resources Inspector](#6-human-resources-inspector)
       * [Add/Edit Holidays](#addedit-holidays)
@@ -136,12 +136,12 @@ This Java application provides a graphical user interface for managing a medical
 
 1. Launch the application.
 2. In the login window:
-   * Enter your registration E-mail addres in the *E-mail* field.
+   * Enter your registration E-mail address in the *E-mail* field.
    * Enter your registration password in the *Password* field
    * Click the *Login* button.
 3. Upon successful login, the application will display the Main Menu.
 
-### generic user functionality
+### General user functionality
 
 *   After login succesfully the user will be redirected to the Main Menu("Meniul Principal") from where he can access diferent parts of the application based on his role. The basic 4 interaction that every role has are:
 1.   **View Personal Infos("Vizualizare Informatii Personale"):** Where the user can view his personal infos. Those infos are based on the specific role:
@@ -207,7 +207,7 @@ This Java application provides a graphical user interface for managing a medical
 
 #### Delete User
 
-* For deleting an user the *Admin* has to follow those steps:
+* For deleting a user the *Admin* has to follow those steps:
 1. Select the wanted user from the *Users Table*.
 2. Click *Delete User* button, a dialogue window will open.
 3. Confirm this action by clicking the *Yes* button, or *No* button to cancel.
@@ -228,7 +228,7 @@ This Java application provides a graphical user interface for managing a medical
 5. Input the wanted date for this appointment. If the date is valid the *Select hour* window will open.
 6. Select the wanted hour by clicking the *Select hour* button.
    * If the doctor and nurse are disponible in that date a select menu will open whit the disponible hours.
-   * If the doctor or nurse are not disponible a dialogue window fill appear and the date need to be changed.
+   * If the doctor or nurse are not disponible a dialog window will appear and the date need to be changed.
 7. After all the information are added and valid a **bill** will be generated with all the services and their prices.
 8. Click *Create appointment* button to finish this action.
 
@@ -237,7 +237,7 @@ This Java application provides a graphical user interface for managing a medical
 * The *Doctor* role can visualize the informations, reports and the medical history for a selected pacient. 
 * Doctors have two additional options in the Main Menu:
 1. **View Salary:** where the doctor can view his salary for a selected month based on his worked hours.
-2. **View Profit:** whre the doctor can view his profit raport for a selected month.
+2. **View Profit:** where the doctor can view his profit raport for a selected month.
 
 * **To make any action the *Doctor* needs to select a pacient using *Registered pacients* button to view all the registered pacients or *Programed pacients* button to view all the programed pacients for him. After a pacient is selected the doctor can select his wanted action.**
 
@@ -250,11 +250,11 @@ This Java application provides a graphical user interface for managing a medical
 * For filling a raport the *Doctor* has to follow those steps:
 1. Click *View reports* button, this will open a window with all the uncompleted report for his pacients.
 2. Select the wanted report, this will open the *Medical Report Window*.
-3. In this window the doctor can add a *medical recomandation* by clicking *Select recomandation doctor* button. A list with all the doctors will open, select the wanted doctor from here.
+3. In this window the doctor can add a *medical recommendation* by clicking *Select recommendation doctor* button. A list with all the doctors will open, select the wanted doctor from here.
 4. The doctor can add or remove medical services:
    * To add a new service click *Add service* button and select the wanted services.
    * To remove a service click the *Remove* button placed in the right of a service name.
-5. Fill the rest of the filds: **Simptoms**, **Diagnostic**, **Recomandation** and **Result**.
+5. Fill the rest of the fields: **Simptoms**, **Diagnostic**, **recommendation** and **Result**.
 6. Click the *Ok* button to finish this action or *Cancel* button to discard those changes. After the report has been finialized it can not be modify.
 7. The report will be automaticaly signed with the doctor code.
 
@@ -286,14 +286,14 @@ This Java application provides a graphical user interface for managing a medical
 
 * The *Financial Expert* role can visualize the salary of every role that has one. He also can view the profit made by a docotr, medical unit, service or the total profit for the hospital chain.
 
-#### Salary Operation
+#### Salary Operations
 
 * To visualizing the salary of a user the *Finanacial Expert* has to follow those steps:
-1. Click *Salary Operation* button, this will open a window with two list, one for **Nurses** and one for **Doctors**.
+1. Click *Salary Operations* button, this will open a window with two list, one for **Nurses** and one for **Doctors**.
 2. Select one by clicking on his name, this will open a list with the months of the current year.
 3. By clicking on a month the salary will appear in the buttom of this window.
 
-#### Profit Operation
+#### Profit Operations
 
 * To visualizing the profit the *Finanacial Expert* has to follow those steps:
 1. Click *Profit Operation* button, this will open a window with 4 options:
@@ -319,8 +319,8 @@ This Java application provides a graphical user interface for managing a medical
 
 ### 6. Human Resources Inspector
 
-* The *Human Resources Inspector* can view and modify the work schedule for an user.
-* **Before any operation can be carried the *Human Resources Inspector* need to select an user by filling the First Name, Last Name and Role fields**
+* The *Human Resources Inspector* can view and modify the work schedule for a user.
+* **Before any operation can be carried the *Human Resources Inspector* need to select a user by filling the First Name, Last Name and Role fields**
 * If a user was found a new window will open, this window contains:
 1. **Holidays Table:** here are all the holidays for the selected user.
 2. **generic Schedule:** here are the week days that the user works.
@@ -410,8 +410,8 @@ This Java application provides a graphical user interface for managing a medical
 
 * `ShowModul2.java`: Handles financial expert specific actions.
 * `ShowExpertFinanciarProfit.java`: Handles profit operations.
-* `ShowExpertFinanciarSalarii.java`: Handles salary operations.
-* `ShowBonus.java`: Handles doctor salary operation.
+* `ShowExpertFinanciarSalarii.java`: Handles Salary Operationss.
+* `ShowBonus.java`: Handles doctor Salary Operations.
 
 ### Human Resources Inspector Role Classes
 
