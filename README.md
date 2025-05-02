@@ -6,12 +6,16 @@ This Java application provides a graphical user interface for managing a medical
 
 * [Technologies Used](#technologies-used)
 * [Installation](#installation)
+   * [Prerequisites](#prerequisites)
+   * [Database Setup](#database-setup)
+   * [Compilation and Building](#compilation-and-building)
+   * [Running the Application](#running-the-application)
 * [Usage](#usage)
-    * [General Description](#general-description)
-    * [Admin and Super Admin](#admin-and-super-admin)
-        * [Add User](#add-user)
-        * [Edit User](#edit-user)
-        * [Delete User](#delete-user)
+   * [General Description](#general-description)
+   * [1.Admin and Super Admin](#admin-and-super-admin)
+      * [Add User](#add-user)
+      * [Edit User](#edit-user)
+      * [Delete User](#delete-user)
 
 ## Technologies Used
 
@@ -111,8 +115,9 @@ This Java application provides a graphical user interface for managing a medical
 3. Upon successful login, the application will display the Main Menu.
 
 ### General user functionality
-* After login succesfully the user will be redirected to the Main Menu("Meniul Principal") from where he can access diferent parts of the application based on his role. The basic 4 interaction that every role has are:
-  1. **View Personal Infos("Vizualizare Informatii Personale"):** Where the user can view his personal infos. Those infos are based on the specific role:
+
+*   After login succesfully the user will be redirected to the Main Menu("Meniul Principal") from where he can access diferent parts of the application based on his role. The basic 4 interaction that every role has are:
+1.   **View Personal Infos("Vizualizare Informatii Personale"):** Where the user can view his personal infos. Those infos are based on the specific role:
      * *User-"Utilizator"(all roles have those information):*
         * CNP
         * Last Name
@@ -141,9 +146,9 @@ This Java application provides a graphical user interface for managing a medical
         * Degree
      * *Receptionist-"Receptioner":*
         * Medical Unit ID
-  3. **Show Timetable("Afisare Orar"):** Where the user can view his *work schedule* and his *medical institute schedule*(where it is the case).
-  4. **Work("Munca"):** This is the principal menu for role-specific actions.
-  5. **Logout:** Exits the user account.
+3.   **Show Timetable("Afisare Orar"):** Where the user can view his *work schedule* and his *medical institute schedule*(where it is the case).
+4.   **Work("Munca"):** This is the principal menu for role-specific actions.
+5.   **Logout:** Exits the user account.
 
 1. ### Admin and Super Admin
 
