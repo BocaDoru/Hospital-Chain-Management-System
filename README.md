@@ -17,7 +17,7 @@ This Java application provides a graphical user interface for managing a medical
       * [Edit User](#edit-user)
       * [Delete User](#delete-user)
    * [2. Receptionist](#2-receptionist)
-      * [Add new programation](#add-new-programation)
+      * [Add New Appointment](#add-new-appointment)
    * [3. Doctor](#3-doctor)
       * [View Pacient Information](#view-pacient-information)
       * [View Pacient Reports](#view-pacient-reports)
@@ -42,6 +42,7 @@ This Java application provides a graphical user interface for managing a medical
     * [Financial Expert Role Classes](#financial-expert-role-classes)
     * [Human Resources Inspector Role Classes](#human-resources-inspector-role-classes)
     * [Medical Unit Classes](#medical-unit-classes)
+* [Team Contributions](#team-contributions)
 
 ## Technologies Used
 
@@ -213,23 +214,23 @@ This Java application provides a graphical user interface for managing a medical
 
 ### 2. Receptionist
 
-* The *Receptionist* role can make a **medical programation** for a pacient to his medical unit.
+* The *Receptionist* role can make a **medical appointment** for a pacient to his medical unit.
 
-#### Add new programation
+#### Add New Appointment
 
-* For adding a new programation the *Receptionist* has to follow those steps:
+* For adding a new appointment the *Receptionist* has to follow those steps:
 1. Click *Select pacient* button to select a pacient from the database or *Create new pacient* button to create a new pacient.
    * If the *Select pacient* option was selected a list of all the pacients will open.
    * If the *Create new pacient* option was selected a formular with the new pacient information will open. The receptionist need to add those information.
 2. Click *Select doctor* button to select a doctor, this will open a new window with all the doctors from this medical unit, then select the wanted doctor. 
 3. Click *Select nurse* button to select a nurse, this will open a new window with all the nurses from this medical unit, then select the wanted nurse.
 4. Click *Select services* button to select all the wanted services, this will open a new window with all services that the selected doctor can do.
-5. Input the wanted date for this programation. If the date is valid the *Select hour* window will open.
+5. Input the wanted date for this appointment. If the date is valid the *Select hour* window will open.
 6. Select the wanted hour by clicking the *Select hour* button.
    * If the doctor and nurse are disponible in that date a select menu will open whit the disponible hours.
    * If the doctor or nurse are not disponible a dialogue window fill appear and the date need to be changed.
 7. After all the information are added and valid a **bill** will be generated with all the services and their prices.
-8. Click *Create programation* button to finish this action.
+8. Click *Create appointment* button to finish this action.
 
 ### 3. Doctor
 
@@ -384,7 +385,7 @@ This Java application provides a graphical user interface for managing a medical
 
 * `Receptioner.java`: Contains the receptionist specific fields. Provides methods for retrieving receptionist data in the database.
 * `Pacient.java`: Contains the pacient specific fields. Provides methods for retrieving and creating pacient data in the database.
-* `Programare.java`: Contains the programation specific fields. Provides methods for retrieving and creating programation data in the database.
+* `Programare.java`: Contains the appointment specific fields. Provides methods for retrieving and creating appointment data in the database.
 * `ProgramareFrame.java`: Handles receptionist role specific actions.
 * `PacientiListFrame.java`, `MediciListFrame.java`, `AsistentListFrame.java`, `ServiciiListFrame.java`, `TimeListFrame.java`: Handles list selection frames.
 * `CreerePacientFrame.java`: Handles pacient registration.
@@ -425,3 +426,38 @@ This Java application provides a graphical user interface for managing a medical
 
 * `UnitateMedicala.java`: Contains the medical unit specific fields. Provides methods for retrieving medical unit data in the database.
 * `CabinetMedical.java`: Contains the medical cabinet specific fields.
+
+## Team Contributions
+
+*This project was a collaborative effort by 3 students. The following details the contributions of each member:
+
+* **Boca Ioan Doru**
+  * Project Leadership and Coordination:
+    * Defined project scope and objectives.
+    * Divided tasks among team members based on their skills and expertise.
+    * Scheduled meetings and monitored progress to ensure timely completion.
+  * Database Design and Implementation:
+    * Created the relational database schema in MySQL to store user, employee, patient, and medical data.
+    * Defined tables, columns, data types, primary keys, foreign keys, and relationships.
+    * Implemented views and triggers within the database.
+    * Implemented database connection logic within the application.
+  * Medical Module Development:
+    * Designed and implemented the GUI windows and business logic for the Doctor, Nurse, and Receptionist roles.
+    * Developed classes to represent medical staff, patient information, appointments, and medical records.
+  * Initial Project Setup:
+    * Established the project's class structure and package organization.
+    * Created core classes for database interaction.
+  * Documentation:
+    * Wrote the project's documentation, including user manual and technical specifications.
+
+* **Birlea Bogdan Alexandru**
+  * Database Design and Implementation:
+    * Implemented views and triggers within the database.
+  * Financial Module Development:
+    * Designed and implemented the GUI windows and business logic for Financial Expert role.
+  * Admin and Super Admin Module Development
+    * Designed and implemented the GUI windows and business logic for Admin and Super Admin roles.
+
+* **Marian Alexandru**
+  * Human Resources Module Development:
+    * Designed and implemented the GUI windows and business logic for Human Resources Inspector role.
