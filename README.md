@@ -303,3 +303,50 @@ This Java application provides a graphical user interface for managing a medical
 3. Select one ore more months then click *Generate Report* button.
 4. A dialogue window will appear with the salary for each selected month.
 
+### 6. Human Resources Inspector
+
+* The *Human Resources Inspector* can view and modify the work schedule for an user.
+* **Before any operation can be carried the *Human Resources Inspector* need to select an user by filling the First Name, Last Name and Role fields**
+* If a user was found a new window will open, this window contains:
+1. **Holidays Table:** here are all the holidays for the selected user.
+2. **General Schedule:** here are the week days that the user works.
+3. **Specific Schedule:** some roles can have a *specific schedule* for a date. This schedule has priority over the *General Schedule*. 
+
+#### Add/Edit Holidays
+
+* For adding a new holiday the *Human Resources Inspector* has to follow those steps:
+1. Click *Add Holiday* button under the holidays table, this will open a new window.
+2. Fill the *Start Date* and *End Date* fields.
+3. Click *OK* button to finish this action, or *Cancel* otherwise.
+
+* For editing an existing holiday the *Human Resources Inspector* has to follow those steps:
+1. Select the wanted holiday from the table.
+2. Click *Edit Holiday* button under the holidays table, this will open a new window.
+3. Fill the new *Start Date* and *End Date*.
+4. Click *OK* button to finish this action, or *Cancel* to discard those changes.
+
+#### Add/Edit General Schedule
+
+* For adding a new general schedule entry the *Human Resources Inspector* has to follow those steps:
+1. Click *Add* button under the general schedule table, this will open a new window.
+2. Fill the *Day*, *Start Time* and *End Time* fields.
+3. Click *OK* button to finish this action, or *Cancel* otherwise.
+
+* For editing an existing general schedule entry the *Human Resources Inspector* has to follow those steps:
+1. Select the wanted general schedule entry from the table.
+2. Click *Edit* button under the general schedule table, this will open a new window.
+3. Fill the new *Day*, *Start Time* and *End Time* fields.
+4. Click *OK* button to finish this action, or *Cancel* to discard those changes.
+
+#### Add/Edit Specific Schedule
+
+* For adding a new specific schedule entry the *Human Resources Inspector* has to follow those steps:
+1. Click *Add* button under the specific schedule table, this will open a new window.
+2. Fill the *Date*, *Start Time* and *End Time* fields.
+3. Click *OK* button to finish this action, or *Cancel* otherwise.
+
+* For editing an existing specific schedule entry the *Human Resources Inspector* has to follow those steps:
+1. Select the wanted specific schedule entry from the table.
+2. Click *Edit* button under the specific schedule table, this will open a new window.
+3. Fill the new *Date*, *Start Time* and *End Time* fields.
+4. Click *OK* button to finish this action, or *Cancel* to discard those changes.
