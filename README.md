@@ -12,7 +12,7 @@ This Java application provides a graphical user interface for managing a medical
    * [Running the Application](#running-the-application)
 * [Usage](#usage)
    * [General Description](#general-description)
-   * [1.Admin and Super Admin](#1-.-admin-and-super-admin)
+   * [1.Admin and Super Admin](#1.-admin-and-super-admin)
       * [Add User](#add-user)
       * [Edit User](#edit-user)
       * [Delete User](#delete-user)
