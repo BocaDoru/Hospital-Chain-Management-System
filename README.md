@@ -22,6 +22,9 @@ This Java application provides a graphical user interface for managing a medical
       * [View Pacient Information](#view-pacient-information)
       * [View Pacient Reports](#view-pacient-reports)
       * [View Pacient History](#view-pacient-history)
+    * [4. Nurse](#4-nurse)
+      * [View Pacient Information](#view-pacient-information)
+      * [View Pacient Reports](#view-pacient-reports)
 
 ## Technologies Used
 
@@ -241,4 +244,23 @@ This Java application provides a graphical user interface for managing a medical
 
 * Click *View history* button and select the wanted medical report to see it's informations.
 
+### 4. Nurse
+
+* The *Nurse* role can vizualize the informations and reports for a selected pacient. 
+* Nurses have one additional option in the Main Menu:
+1. **View Salary:** where the nurse can view his salary for a selected month based on his worked hours.
+
+* **To make any action the *Nurse* needs to select a pacient using *Registered pacients* button to view all the registered pacients or *Programed pacients* button to view all the programed pacients for him. After a pacient is selected the nurse can select his wanted action.**
+
+#### View Pacient Information
+
+* Click *View information* button to visualize the pacient account information.
+
+#### View Pacient Reports
+
+* For filling a raport the *Nurse* has to follow those steps:
+1. Click *View reports* button, this will open a window with all the uncompleted report for his pacients.
+2. Select the wanted report, this will open the *Medical Report Window*.
+3. In this window the nurse can add the results for all services. Those will appear int the **Investigation** section of the report.
+4. Click the *Ok* button to finish this action or *Cancel* button to discard those changes.
 
