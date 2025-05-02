@@ -16,6 +16,8 @@ This Java application provides a graphical user interface for managing a medical
       * [Add User](#add-user)
       * [Edit User](#edit-user)
       * [Delete User](#delete-user)
+   * [2. Receptionist](#2-receptionist)
+      * [Add new programation](#add-new-programation)
 
 ## Technologies Used
 
@@ -184,3 +186,55 @@ This Java application provides a graphical user interface for managing a medical
 1. Select the wanted user from the *Users Table*.
 2. Click *Delete User* button, a dialog window will open.
 3. Confirm this action by clicking the *Yes* button, or *No* button to cancel.
+
+### 2. Receptionist
+
+* The *Receptionist* role can make a **medical programation** for a pacient to his medical unit.
+
+#### Add new programation
+
+* For adding a new programation the *Receptionist* has to follow those steps:
+1. Click *Select pacient* button to select a pacient from the database or *Create new pacient* button to create a new pacient.
+   * If the *Select pacient* option was selected a list of all the pacients will open.
+   * If the *Create new pacient* option was selected a formular with the new pacient information will open. The receptionist need to add those information.
+2. Click *Select doctor* button to select a doctor, this will open a new window with all the doctors from this medical unit, then select the wanted doctor. 
+3. Click *Select nurse* button to select a nurse, this will open a new window with all the nurses from this medical unit, then select the wanted nurse.
+4. Click *Select services* button to select all the wanted services, this will open a new window with all services that the selected doctor can do.
+5. Input the wanted date for this programation. If the date is valid the *Select hour* window will open.
+6. Select the wanted hour by clicking the *Select hour* button.
+   * If the doctor and nurse are disponible in that date a select menu will open whit the disponible hours.
+   * If the doctor or nurse are not disponible a dialog window fill appear and the date need to be changed.
+7. After all the information are added and valid a **bill** will be generated with all the services and their prices.
+8. Click *Create programation* button to finish this action.
+
+### 3. Doctor
+
+* The *Doctor* role can vizualize the informations, reports and the medical history for a selected pacient. 
+* Doctors have two additional options in the Main Menu:
+1. **View Salary:** where the doctor can view his salary for a selected month based on his worked hours.
+2. **View Profit:** whre the doctor can view his profit raport for a selected month.
+
+* **To make any action the *Doctor* needs to select a pacient using *Registered pacients* button to view all the registered pacients or *Programed pacients* button to view all the programed pacients for him. After a pacient is selected the doctor can select his wanted action.**
+
+#### View Pacient Information
+
+* Click *View information* button to visualize the pacient account information.
+
+#### View Pacient Reports
+
+* For filling a raport the *Doctor* has to follow those steps:
+1. Click *View reports* button, this will open a window with all the uncompleted report for his pacients.
+2. Select the wanted report, this will open the *Medical Report Window*.
+3. In this window the doctor can add a *medical recomandation* by clicking *Select recomandation doctor* button. A list with all the doctors will open, select the wanted doctor from here.
+4. The doctor can add or remove medical services:
+   * To add a new service click *Add service* button and select the wanted services.
+   * To remove a service click the *Remove* button placed in the right of a service name.
+5. Fill the rest of the filds: **Simptoms**, **Diagnostic**, **Recomandation** and **Result**.
+6. Click the *Ok* button to finish this action or *Cancel* button to discard those changes. After the report has been finialized it can not be modify.
+7. The report will be automaticaly signed with the doctor code.
+
+#### View Pacient History
+
+* Click *View history* button and select the wanted medical report to see it's informations.
+
+
