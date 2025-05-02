@@ -18,6 +18,10 @@ This Java application provides a graphical user interface for managing a medical
       * [Delete User](#delete-user)
    * [2. Receptionist](#2-receptionist)
       * [Add new programation](#add-new-programation)
+   * [3. Doctor](#3-doctor)
+      * [View Pacient Information](#view-pacient-information)
+      * [View Pacient Reports](#view-pacient-reports)
+      * [View Pacient History](#view-pacient-history)
 
 ## Technologies Used
 
