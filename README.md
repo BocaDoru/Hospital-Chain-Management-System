@@ -23,8 +23,8 @@ This Java application provides a graphical user interface for managing a medical
       * [View Pacient Reports](#view-pacient-reports)
       * [View Pacient History](#view-pacient-history)
     * [4. Nurse](#4-nurse)
-      * [View Pacient Information](#view-pacient-information)
-      * [View Pacient Reports](#view-pacient-reports)
+      * [View Pacient Information](#view-pacient-information-1)
+      * [View Pacient Reports](#view-pacient-reports-1)
 
 ## Technologies Used
 
