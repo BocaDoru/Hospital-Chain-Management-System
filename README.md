@@ -165,7 +165,7 @@ This Java application provides a graphical user interface for managing a medical
   * **Medical Competence("Medic Competenta)**
     * CNP(the *Doctor* CNP)
     * Competence ID
-  *  **Medical Unit("Medic Unitate")**
+  * **Medical Unit("Medic Unitate")**
     * CNP(the *Doctor* CNP)
     * Medical Unit ID
 5. After the wanted user has been added click the *Sign Up* button.
