@@ -25,6 +25,10 @@ This Java application provides a graphical user interface for managing a medical
     * [4. Nurse](#4-nurse)
       * [View Pacient Information](#view-pacient-information-1)
       * [View Pacient Reports](#view-pacient-reports-1)
+    * [5. Financial Expert](#5-financial-expert)
+      * [Salary Operation](#salary-operation)
+      * [Profit Operation](#profit-operation)
+      * [Doctor Salary](#doctor-salary)
 
 ## Technologies Used
 
@@ -191,7 +195,7 @@ This Java application provides a graphical user interface for managing a medical
 
 * For deleting an user the *Admin* has to follow those steps:
 1. Select the wanted user from the *Users Table*.
-2. Click *Delete User* button, a dialog window will open.
+2. Click *Delete User* button, a dialogue window will open.
 3. Confirm this action by clicking the *Yes* button, or *No* button to cancel.
 
 ### 2. Receptionist
@@ -210,7 +214,7 @@ This Java application provides a graphical user interface for managing a medical
 5. Input the wanted date for this programation. If the date is valid the *Select hour* window will open.
 6. Select the wanted hour by clicking the *Select hour* button.
    * If the doctor and nurse are disponible in that date a select menu will open whit the disponible hours.
-   * If the doctor or nurse are not disponible a dialog window fill appear and the date need to be changed.
+   * If the doctor or nurse are not disponible a dialogue window fill appear and the date need to be changed.
 7. After all the information are added and valid a **bill** will be generated with all the services and their prices.
 8. Click *Create programation* button to finish this action.
 
@@ -263,4 +267,39 @@ This Java application provides a graphical user interface for managing a medical
 2. Select the wanted report, this will open the *Medical Report Window*.
 3. In this window the nurse can add the results for all services. Those will appear int the **Investigation** section of the report.
 4. Click the *Ok* button to finish this action or *Cancel* button to discard those changes.
+
+### 5. Financial Expert
+
+* The *Financial Expert* role can visualize the salary of every role that has one. He also can view the profit made by a docotr, medical unit, service or the total profit for the hospital chain.
+
+#### Salary Operation
+
+* To visualizing the salary of a user the *Finanacial Expert* has to follow those steps:
+1. Click *Salary Operation* button, this will open a window with two list, one for **Nurses** and one for **Doctors**.
+2. Select one by clicking on his name, this will open a list with the months of the current year.
+3. By clicking on a month the salary will appear in the buttom of this window.
+
+#### Profit Operation
+
+* To visualizing the profit the *Finanacial Expert* has to follow those steps:
+1. Click *Profit Operation* button, this will open a window with 4 options:
+   * **Profit per Doctor**
+   * **Profit per Unit**
+   * **Profit per Service**
+   * **Total Profit**
+2. After selecting one of the above option and clicking *Generate Report* button a new window will open.
+3. Based on the option selected at the above step:
+   1. Select a **Doctor**, **Medical Unit**, **Service**, if option 1, 2 or 3 was selected.
+   2. Go to the next step, if the option 4 was selected.
+4. A new window will open the months of the current year.
+5. Select one ore more months then click *Generate Report* button.
+6. A dialogue window will appear with the profit for each selected month.
+
+#### Doctor Salary
+
+* This option compute the salary of a doctor based on his finished medical report from that month. To visualize this the *Fincancial Expert* has to follow those steps:
+1. Click *Doctor Salary Bonus* button, this will open a list with all the **Doctors**.
+2. Select a doctor by clicking on his name, this will open a list with the months of the current year.
+3. Select one ore more months then click *Generate Report* button.
+4. A dialogue window will appear with the salary for each selected month.
 
