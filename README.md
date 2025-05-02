@@ -1,6 +1,6 @@
 # Hospital Chain Management System
 
-This Java application provides a graphical user interface for managing a medical institute chain. It allows medical field workers to do their specific tasks. This is a role base application with multiple roles( e.g. Admin, Doctor, Nurse, etc.).
+This Java application provides a graphical user interface for managing a medical institute chain. It allows medical field workers to do their specific tasks. This is a role-base application with multiple roles( e.g. Admin, Doctor, Nurse, etc.).
 
 ## Table of Contents
 
@@ -54,7 +54,7 @@ This Java application provides a graphical user interface for managing a medical
 
 ### Prerequisites
 
-* **Java Development Kit (JDK)**: Version 8 or later is required.  You can download it from [Oracle's website](https://www.oracle.com/java/technologies/javase-downloads.html) or use an open-source distribution like [OpenJDK](https://openjdk.java.net/).
+* **Java Development Kit (JDK)**: Version 17 or later is required.  You can download it from [Oracle's website](https://www.oracle.com/java/technologies/javase-downloads.html) or use an open-source distribution like [OpenJDK](https://openjdk.java.net/).
 * **MySQL Server**: A MySQL server is necessary to store the application's data.  You'll need to set up a database and user for the application.  Download MySQL from [MySQL Community Downloads](https://dev.mysql.com/downloads/).
 
 ### Database Setup
@@ -136,7 +136,7 @@ This Java application provides a graphical user interface for managing a medical
 
 1. Launch the application.
 2. In the login window:
-   * Enter your registration email addres in the *Email* field.
+   * Enter your registration E-mail addres in the *E-mail* field.
    * Enter your registration password in the *Password* field
    * Click the *Login* button.
 3. Upon successful login, the application will display the Main Menu.
@@ -186,7 +186,7 @@ This Java application provides a graphical user interface for managing a medical
 
 * For adding a new user the *Admin* has to follow those steps:
 1. Click the *Add User* button, this will open another menu with more options.
-2. For adding a new user select the **User("Utilizator)** option, a formular will open where you need to add the personal information for the new user:
+2. For adding a new user select the **User("Utilizator)** option, a form will open where you need to add the personal information for the new user:
 3. To add the suplimentar information for each role of an already added user select their role. Those roles can be:  **Medical Employee("Medical")***(if you want to add a Doctor or a Nurse you need to complete those information first)*, **Nurse("Asistent Medical)**, **Doctor("Medic")** amd **Receptionist("Receptioner")**.
 4. For a Doctor there can be added suplimentar informations as:
     * **Medical Competence("Medic Competenta)**
@@ -221,7 +221,7 @@ This Java application provides a graphical user interface for managing a medical
 * For adding a new appointment the *Receptionist* has to follow those steps:
 1. Click *Select pacient* button to select a pacient from the database or *Create new pacient* button to create a new pacient.
    * If the *Select pacient* option was selected a list of all the pacients will open.
-   * If the *Create new pacient* option was selected a formular with the new pacient information will open. The receptionist need to add those information.
+   * If the *Create new pacient* option was selected a form with the new pacient information will open. The receptionist need to add those information.
 2. Click *Select doctor* button to select a doctor, this will open a new window with all the doctors from this medical unit, then select the wanted doctor. 
 3. Click *Select nurse* button to select a nurse, this will open a new window with all the nurses from this medical unit, then select the wanted nurse.
 4. Click *Select services* button to select all the wanted services, this will open a new window with all services that the selected doctor can do.
@@ -234,7 +234,7 @@ This Java application provides a graphical user interface for managing a medical
 
 ### 3. Doctor
 
-* The *Doctor* role can vizualize the informations, reports and the medical history for a selected pacient. 
+* The *Doctor* role can visualize the informations, reports and the medical history for a selected pacient. 
 * Doctors have two additional options in the Main Menu:
 1. **View Salary:** where the doctor can view his salary for a selected month based on his worked hours.
 2. **View Profit:** whre the doctor can view his profit raport for a selected month.
@@ -264,7 +264,7 @@ This Java application provides a graphical user interface for managing a medical
 
 ### 4. Nurse
 
-* The *Nurse* role can vizualize the informations and reports for a selected pacient. 
+* The *Nurse* role can visualize the informations and reports for a selected pacient. 
 * Nurses have one additional option in the Main Menu:
 1. **View Salary:** where the nurse can view his salary for a selected month based on his worked hours.
 
@@ -437,13 +437,13 @@ This Java application provides a graphical user interface for managing a medical
     * Divided tasks among team members based on their skills and expertise.
     * Scheduled meetings and monitored progress to ensure timely completion.
   * Database Design and Implementation:
-    * Created the relational database schema in MySQL to store user, employee, patient, and medical data.
+    * Created the relational database schema in MySQL to store user, employee, pacient, and medical data.
     * Defined tables, columns, data types, primary keys, foreign keys, and relationships.
     * Implemented views and triggers within the database.
     * Implemented database connection logic within the application.
   * Medical Module Development:
     * Designed and implemented the GUI windows and business logic for the Doctor, Nurse, and Receptionist roles.
-    * Developed classes to represent medical staff, patient information, appointments, and medical records.
+    * Developed classes to represent medical staff, pacient information, appointments, and medical records.
   * Initial Project Setup:
     * Established the project's class structure and package organization.
     * Created core classes for database interaction.
