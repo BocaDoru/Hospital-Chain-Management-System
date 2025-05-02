@@ -101,14 +101,49 @@ This Java application provides a graphical user interface for managing a medical
 
 ## Usage
 
-### General Description
+### Login
 
-* First login into the application using the GUI frame, you need to add your e-mail and password used at registration.
+1. Launch the application.
+2. In the login window:
+   * Enter your registration email addres in the *Email* field.
+   * Enter your registration password in the *Password* field
+   * Click the *Login* button.
+3. Upon successful login, the application will display the Main Menu.
+
+### General user functionality
 * After login succesfully the user will be redirected to the Main Menu("Meniul Principal") from where he can access diferent parts of the application based on his role. The basic 4 interaction that every role has are:
-  1. View Personal Infos("Vizualizare Informatii Personale") where the user can view his personal infos(e.g. First Name, Last Name, CNP, Address, E-mail, etc.)
-  2. Show Timetable("Afisare Orar") where the user can view his work schedule and his medical institute schedule where it is the case.
-  3. Work("Munca") this is the principal menu for work related action for every user.
-  4. Logout.
+  1. **View Personal Infos("Vizualizare Informatii Personale"):** Where the user can view his personal infos. Those infos are based on the specific role:
+     * *User-"Utilizator"(all roles have those information):*
+        * CNP
+        * Last Name
+        * First Name
+        * Address
+        * Phone Number
+        * E-mail
+        * Bank Account
+        * Contract Number
+        * Date of Employment
+        * Role
+        * Password
+     * *Medical Employee-"Medical"(all the medical roles have those information):*
+        * Salary
+        * Number of contractual hours
+     * *Doctor-"Medic":*
+        * Speciality
+        * Degree
+        * Code
+        * Service procentile
+        * Scientific title(Optional)
+        * Didactic title(Optional)
+     * *Nurse-"Asistent Medical":*
+        * Medical Unit ID
+        * Type
+        * Degree
+     * *Receptionist-"Receptioner":*
+        * Medical Unit ID
+  3. **Show Timetable("Afisare Orar"):** Where the user can view his *work schedule* and his *medical institute schedule*(where it is the case).
+  4. **Work("Munca"):** This is the principal menu for role-specific actions.
+  5. **Logout:** Exits the user account.
 
 1. ### Admin and Super Admin
 
@@ -117,54 +152,27 @@ This Java application provides a graphical user interface for managing a medical
 
   #### Add User
   * For adding a new user the *Admin* has to follow those steps:
-    1. Press the *Add User* button, this will open another menu with more options.
-    2. For adding a new user select the **User("Utilizator)** option, a formular will open where you need to add the personal information for the new user:
-      * CNP
-      * Last Name
-      * First Name
-      * Address
-      * Phone Number
-      * E-mail
-      * Bank Account
-      * Contract Number
-      * Date of Employment
-      * Role
-      * Password
-    3. To add the suplimentar information for each role of an already added user select their role. Those roles can be:  **Medical Employee("Medical")***(if you want to add a Doctor or a Nurse you need to complete those information first)*, **Nurse("Asistent Medical)**, **Doctor("Medic")** amd **Receptionist("Receptioner")**.
-      * Medical Employee has the following information:
-          * CNP(used to link those information to the *User* account)
-          * Salary
-          * Number of contractual hours
-      * Doctor has the following information:
-        * CNP(used to link those information to the *Medical Employee* account)
-        * Speciality
-        * Degree
-        * Code
-        * Service procentile
-        * Scientific title(Optional)
-        * Didactic title(Optional)
-      * Nurse has the following information:
-        * CNP(used to link those information to the *Medical Employee* account)
-        * Medical Unit ID
-        * Type
-        * Degree
-      * Receptionist has the following information:
-        * CNP(used to link those information to the *User* account)
-        * Medical Unit ID
-    4. For a Doctor there can be added suplimentar informations as:
-        * **Medical Competence("Medic Competenta)**
-          * CNP(the *Doctor* CNP)
-          * Competence ID
-        * **Medical Unit("Medic Unitate")**
-          * CNP(the *Doctor* CNP)
-          * Medical Unit ID
-    5. After the wanted user has been added press the *Sign Up* button.
+  1. Click the *Add User* button, this will open another menu with more options.
+  2. For adding a new user select the **User("Utilizator)** option, a formular will open where you need to add the personal information for the new user:
+  3. To add the suplimentar information for each role of an already added user select their role. Those roles can be:  **Medical Employee("Medical")***(if you want to add a Doctor or a Nurse you need to complete those information first)*, **Nurse("Asistent Medical)**, **Doctor("Medic")** amd **Receptionist("Receptioner")**.
+  4. For a Doctor there can be added suplimentar informations as:
+      * **Medical Competence("Medic Competenta)**
+         * CNP(the *Doctor* CNP)
+         * Competence ID
+      * **Medical Unit("Medic Unitate")**
+         * CNP(the *Doctor* CNP)
+         * Medical Unit ID
+   5. After the wanted user has been added click the *Sign Up* button.
 
-  ### Edit User
-  * For editing an existing user the *Admin* has to follow those steps:
-    1. Select the user from the table and then press the *Edit User* button, a new menu will open.
-    2. In this menu the *Admin* can modify all the information except the **CNP**.
-    3. After the wanted information where changed press the *Save Changes* button.
+   #### Edit User
+   * For editing an existing user the *Admin* has to follow those steps:
+   1. Select the wanted user from the *Users table*.
+   2. Click the *Edit User* button, a new menu will open.
+   3. In this menu the *Admin* can modify all the information except the **CNP**.
+   4. After the wanted information where changed click the *Save Changes* button.
 
-  ### Delete User
-  * For deleting an user the *Admin* need to select him from the table and press *Delete User* button, after he confirme this action the user account will pe deleted.
+  #### Delete User
+  * For deleting an user the *Admin* has to follow those steps:
+  1. Select the wanted user from the *Users Table*.
+  2. Click *Delete User* button, a dialog window will open.
+  3. Confirm this action by clicking the *Yes* button, or *No* button to cancel.
