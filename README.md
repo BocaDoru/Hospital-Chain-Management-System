@@ -1,4 +1,4 @@
-#Hospital Chain Management System
+# Hospital Chain Management System
 
 This Java application provides a graphical user interface for managing a medical institute chain. It allows medical field workers to do their specific tasks. This is a role base application with multiple roles( e.g. Admin, Doctor, Nurse, etc.).
 
@@ -21,14 +21,83 @@ This Java application provides a graphical user interface for managing a medical
 
 ## Installation
 
-1.  Ensure you have Java Development Kit (JDK) version 17 or higher installed.
-2.  Clone this repository: `git clone https://github.com/BocaDoru/Hospital-Chain-Management-System.git`
-3.  Compile the Java files.
-    * If using an IDE (e.g., IntelliJ IDEA, Eclipse), import the project and build it.
-    * If using the command line:
-        * Navigate to the project's root directory.
-        * Compile all Java files: `javac -sourcepath src -d bin src/*.java`
-4.  Execute the `Main.java` file: `java Main`
+### Prerequisites
+
+* **Java Development Kit (JDK)**: Version 8 or later is required.  You can download it from [Oracle's website](https://www.oracle.com/java/technologies/javase-downloads.html) or use an open-source distribution like [OpenJDK](https://openjdk.java.net/).
+* **MySQL Server**: A MySQL server is necessary to store the application's data.  You'll need to set up a database and user for the application.  Download MySQL from [MySQL Community Downloads](https://dev.mysql.com/downloads/).
+
+### Database Setup
+
+1.  **Create Database**:  Use a MySQL client (like the MySQL Command Line Client or MySQL Workbench) to create the database.
+
+    ```sql
+    CREATE DATABASE proiect3;
+    ```
+
+2.  **Create User and Grant Privileges**:  Create a user named `root` with the password `123456789` and grant it full access to the `proiect3` database.
+
+    ```sql
+    CREATE USER 'root'@'localhost' IDENTIFIED BY '123456789';
+    GRANT ALL PRIVILEGES ON proiect3.* TO 'root'@'localhost';
+    FLUSH PRIVILEGES;
+    ```
+
+    * **Important**:  If you change the username or password, you *must* update the `src/Conexiune.java` file to reflect those changes.  The connection details are hardcoded in the `Conexiune` class:
+
+        ```java
+        connection = DriverManager.getConnection("jdbc:mysql://localhost/proiect3?user=root&password=123456789");
+        ```
+
+### Compilation and Building
+
+1.  **Obtain the Code**:  Download or clone the project source code.
+2.  **Include MySQL Connector/J**:  You need the MySQL Connector/J JDBC driver to compile and run the application. Download it from the [MySQL website](https://dev.mysql.com/downloads/connector/j/) and add the JAR file to your project.
+3.  **Compile**:
+    * **Using an IDE**:  If you're using an IDE like IntelliJ IDEA or Eclipse, import the project and use the IDE's build function to compile the code.  Make sure the MySQL Connector/J JAR is included in the project's build path.
+    * **Command Line**:  To compile from the command line:
+        * Navigate to the project's `src` directory.
+        * Compile the Java files:
+
+            ```bash
+            javac *.java
+            ```
+
+        * Ensure the MySQL Connector/J JAR file is in your classpath when compiling.  For example:
+
+            ```bash
+            javac -cp ".:/path/to/mysql-connector-java-8.0.33.jar" *.java 
+            ```
+            (Replace `/path/to/mysql-connector-java-8.0.33.jar` with the actual path to your JAR)
+4.  **Create a JAR file (Optional)**:
+    * To create an executable JAR file:
+
+        ```bash
+        jar cf HospitalManagementSystem.jar *.class
+        ```
+
+    * This will create a JAR file named `HospitalManagementSystem.jar` in the `src` directory.
+
+### Running the Application
+
+1.  **Start MySQL Server**:  Make sure your MySQL server is running.
+2.  **Run the Application**:
+    * **If using an IDE**:  Run the `src/Main.java` file from your IDE.
+    * **From the command line**:
+        * Navigate to the directory containing the compiled `.class` files or the JAR file.
+        * Execute the JAR file:
+          
+            ```bash
+            java -jar HospitalManagementSystem.jar
+            ```
+            
+            or
+          
+            ```bash
+            java Main
+            ```
+            (if running the class files directly)
+          
+3.  **Login**:  The application's login window should appear.  You can then log in to use the system.
 
 ## Usage
 
